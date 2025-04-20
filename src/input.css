@@ -1,0 +1,125 @@
+@import "tailwindcss";
+.wrapper{
+    @apply
+    /* bg-blue-950 */
+    bg-gradient-to-br from-blue-950 to-sky-600
+    text-white
+    flex flex-col items-center
+    w-[100vw] h-[100vh];
+}
+.tab-container{
+    @apply
+    /* w-[800px] */
+    gap-x-[450px]
+    flex flex-row justify-around;
+}
+.tab{
+    @apply
+    w-[150px] h-[40px] rounded-lg
+    flex justify-center items-center;
+}
+.tab:hover{
+    text-decoration-line: underline;
+}
+.tab-active{
+    @apply
+    w-[150px] h-[40px] rounded-[4px]
+    flex justify-center items-center
+     bg-gray-400 backdrop-blur-3xl;
+    
+   
+}
+.weather-container{
+    @apply
+    /* border-2 border-amber-50 */
+    /* w-[800px] */
+    flex flex-col items-center justify-center;
+}
+.grant-location-container{
+    @apply
+    
+    flex flex-col justify-center items-center
+    gap-[20px]
+   ;
+    display: none;
+    /* display: block; */
+
+
+}
+.grant-location-container button{
+    @apply
+    w-[150px] h-[40px] rounded-[4px]
+    flex justify-center items-center
+ bg-gray-400 backdrop-blur-3xl;
+ 
+}
+
+.loading-container{
+    @apply
+    flex flex-col justify-around 
+    ;
+
+    display: none;
+}
+.user-info-weather {
+    @apply
+    mt-[30px] 
+    ;
+    text-align: center;
+    display: none;
+}
+.location-name{
+    @apply
+    text-3xl font-bold
+    mb-[20px]
+    ;
+}
+[data-searchForm]{
+    @apply
+    flex-row items-center justify-center gap-[10px];
+    display: none;
+    
+}
+#inputValue{
+    @apply
+    bg-white/30 border-white/15 shadow-2xl
+    rounded-[10px] placeholder:text-center pl-4 pr-4
+    w-[250px] h-[35px];
+}
+#inputValue:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+[data-parameter-container]{
+    @apply
+    flex flex-row justify-center gap-[100px];
+    
+}
+[data-weather-desc]{
+    @apply
+    mb-[20px] text-lg ;
+}
+[data-temp]{
+    @apply
+    mb-[50px] text-2xl font-bold;
+}
+.parameter{
+    @apply
+    bg-gray-400 w-[170px] h-[170px] backdrop-blur-3xl
+    rounded-[20px] shadow-lg
+    text-lg font-bold
+    mt-3 mb-5 ml-5 mr-5 
+    flex flex-col justify-center items-center gap-3;
+}
+.active{
+    display:block;
+}
+.active2{
+    display: flex;
+}
+
+[data-searchForm] button{
+    @apply
+    flex justify-center items-center
+    rounded-full h-[35px] w-[35px]
+    bg-white/15 transition-all;
+}

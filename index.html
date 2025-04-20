@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+    <body>
+        <div class="wrapper">
+
+            <h1 class="mt-[50px] mb-[50px] text-center text-4xl font-extrabold tracking-wider
+            ">WEATHER APP</h1>
+
+            <!-- navigation -->
+            <div class="tab-container">
+                <div class="tab" data-userWeather style="cursor: pointer;">Your Weather</div>
+                <div class="tab" data-searchWeather style="cursor: pointer;">Search Weather</div>
+            </div>
+
+            <!-- weather container start -->
+            <div class="weather-container">
+
+                <!-- grant location -->
+                <div class="grant-location-container">
+                    <img src="./Images/location.png" alt="" height="80px" width="80px">
+                    <p>Grant Location Access</p>
+                    <p>Allow access to get weather information</p>
+                    <button>GRANT ACCESS</button>
+                </div>
+                <!-- grant location end -->
+
+                <!-- data search form -->
+                <form action=""  data-searchForm>
+                    <input type="text" name="" id="inputValue"  placeholder="Search For City">
+                    <button style="cursor: pointer;"><img src="./Images/search.png" alt="" width="20" height="20" loading="lazy"></button>
+                </form>
+                <!-- data search form end -->
+
+                <!-- loading screen container -->
+                <div class="loading-container">
+                    <img src="./Images/loading.gif" alt="" height="150" width="150">
+                    <p style="text-align: center;">LOADING...</p>
+                </div>
+                <!-- loading screen container end -->
+
+                <div class="user-info-weather">
+                    <!-- location name -->
+                    <div class="location-name">
+                        <h2 data-city-name></h2>
+                        <img data-country-icon>
+                    </div>
+
+                    <!-- climate condition haze clear etc -->
+                    <div>
+                        <h3 data-weather-desc></h3>
+                    </div>
+
+                    <!-- climate condition image -->
+                    <div>
+                        <img data-weather-icon>
+                    </div>
+
+                    <!-- temp -->
+                    <div>
+                        <p data-temp></p>
+                    </div>
+
+                    <!-- windspeed + humidity + clouds -->
+                    <div data-parameter-container>
+
+                        <!-- windspeed -->
+                        <div class="parameter">
+                            <img src="./Images/wind.png" alt="" height="50" width="50px">
+                            <p>windspeed</p>
+                            <p data-wind></p>
+                        </div>
+
+                        <!-- humidity -->
+                        <div class="parameter">
+                            <img src="./Images/humidity.png" alt="" height="50px" width="50px">
+                            <p>humidity</p>
+                            <p data-humidity></p>
+                        </div>
+
+                        <!-- clouds -->
+                        <div class="parameter">
+                            <img src="./Images/cloud.png" alt="" height="50px" width="50px">
+                            <p>clouds</p>
+                            <p data-clouds></p>
+                        </div>
+
+                    </div>
+                    <!-- windspeed + humidity + clouds END -->
+
+                </div>  
+                <!-- weather info end -->
+
+            </div>
+            <!-- weather container end  -->
+
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
